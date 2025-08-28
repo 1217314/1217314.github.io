@@ -1,48 +1,67 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-
+<html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<meta name="describtion" content="学习网站搭建，博客" />
-	<meta name="keywords" content="Learning, HTML, CSS, JavaScript, blog" />
-	<link rel="stylesheet" href="./styles.css">
-	<title>YinHoy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YinHoy'sWeb</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-	<div id="header">
-		<h1><img src ="images/icon/YinHoy_unhappy.png" align="bottom">  YinHoy的网站</h1>
-	</div>
-	
-	<div id="nav">
-		<a href="/home/">主页</a><br>
-		<a href="/blogs/">我的Blog</a><br>
-		<a href="/fun/">好玩的东西</a><br>
-		<a href="/meme/">meme图专区</a><br>
-		<a href="/idea/">想法</a><br>
-		<a href="/learning/">学习记录</a><br>
-	</div>
 
-	<div id="section">
-		<hr/>
-		<h2>正文</h2>
-		<h2>
-		这是一个测试标题
-		</h2>
-		<p>
-		这是一个测试段落,这个段落非常长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长
-		</p>
-	</div>
+  <body>
+    <!-- 顶栏 -->
+    <header>
+        <button class="menu-toggle">☰</button>
+        <div class="logo">
+            <img src="images/icon/YinHoy_unhappy.png" alt="Logo">
+            <a href="yinhoy.cn">YinHoy</a>
+        </div>
+    </header>
 
-	<div id="footer">
-		<adress>
-		由<a href="https://github.com/1217314">yinhaoyi</a>创建.<br>
-		我的邮箱：<a href="mailto:yinhaoyi_314@qq.com">yinhaoyi_314@qq.com</a><br>
-		中国<br>
-		北京<br>
-		</adress>
-	</div>
+    <!-- 主要内容 -->
+    <div class="container">
+        <!-- 侧边导航栏 -->
+        <aside class="sidebar" id="sidebar">
+            <button class="close-btn">&times;</button>
+            <div class="nav-item active" data-page="home">home</div>
+            <div class="nav-item" data-page="blogs">blogs</div>
+            <div class="nav-item" data-page="study">学习记录</div>
+            <div class="nav-item" data-page="fun">分享</div>
+            <div class="nav-item" data-page="meme">meme图分享</div>
+        </aside>
 
-<script src="./main.js"></script>
+        <!-- 内容区域 -->
+        <main class="content">
+            <!-- 主页内容 -->
+            <section id="home" class="page active">
+                <h2>欢迎来到YinHoy</h2>
+                <p>这是欢迎界面</p >
+            </section>
+
+            <!-- 博客页面 -->
+            <section id="blogs" class="page">
+                <h2>博客文章</h2>
+                <p>这里将展示博客文章列表。目前啥也没有</p >
+            </section>
+
+            <!-- 学习记录 -->
+            <section id="study" class="page">
+                <h2>学习记录</h2>
+                <p>这里会放点笔记啥的，虽然我从来不记</p >
+            </section>
+
+            <!-- Meme图分享 -->
+            <section id="fun" class="page">
+                <h2>分享</h2>
+                <p>这里分享一些我制作的小玩意</p >
+            </section>
+
+            <section id="meme" class="page">
+                <h2>Meme图分享</h2>
+            <p>这里分享一些有趣的meme图片。但是githubpage速度很慢</p >
+            </section>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
