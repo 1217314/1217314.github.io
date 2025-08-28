@@ -59,8 +59,9 @@ header a{
 
 .sidebar {
 	width: 250px;
-    background-color: #444;
+    background-color: #ffffff;
     padding: 32px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     transform: translateX(-100%);
     position: fixed;
@@ -82,6 +83,9 @@ header a{
     .sidebar {
         position: fixed;
     }
+    .sidebar.open {
+        position: fixed;
+}
     .container {
         margin-left: 0;
     }
@@ -101,7 +105,7 @@ header a{
 }
 
 .nav-item {
-    padding: 15px 20px;
+    padding: 20px 50px;
     margin: 8px 15px;
     background-color: #fff;
     border-radius: 5px;
@@ -117,11 +121,17 @@ header a{
 }
 
 .nav-item.active {
-    background-color: #ff976a;
+    background-color: none;
     border: 3px solid #444;
     font-weight: 700;
 }
 
+.nav-item.active#home{
+    background-image: url("../images/background/home_background.png");
+}
+.nav-item.active#study{
+    background-image: url("../images/background/study_background.png");
+}
 /* 内容区域样式 */
 .content {
 	background-image: url("../images/background/background.png");
@@ -140,6 +150,15 @@ header a{
 
 .page.active {
     display: block;
+}
+
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(67, 67, 67);
 }
 
 h2 {
